@@ -33,7 +33,7 @@ async fn do_something(session: Session) -> Result<HttpResponse> {
     let counter: i32 = session
         .get::<i32>("counter")
         .unwrap_or(Some(0))
-        .map_or(1, |inner| inner + 1);
+        .map_or(1, |inner| inner + 2);
     session.insert("counter", counter)?;
 
     Ok(HttpResponse::Ok().json(IndexResponse { user_id, counter }))
