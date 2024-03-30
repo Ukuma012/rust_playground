@@ -3,23 +3,10 @@ name = "playground"
 version = "0.1.0"
 edition = "2021"
 
-[lib]
-path = "src/lib.rs"
-
 [[bin]]
 path = "src/main.rs"
-name = "backend"
+name = "playground"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-actix-session = { version = "0.8.0", features = ["redis-actor-session"] }
-actix-web = "4.5.1"
-env_logger = "0.11.1"
-log = "0.4.20"
-serde = { version = "1.0", features = ["derive"] }
-uuid = { version = "0.8", features = ["serde", "v4"] }
-minijinja = { version = "0.32", features = ["source"] }
-once_cell = "1.17"
-tokio = { version = "1", features = ["full"] }
-dotenvy = "0.15.7"
